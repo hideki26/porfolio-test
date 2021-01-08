@@ -1,0 +1,198 @@
+//*--------------------------------------------------------------
+// START: Reset, mixins & vars
+// --------------------------------------------------------------*/
+@import 'basics/reset';
+@import 'basics/mixins';
+@import 'basics/colors';
+//all vars by this time
+@import 'basics/vars'; 
+
+//*--------------------------------------------------------------
+// FONTS
+//--------------------------------------------------------------*/
+@import 'typography/fonts';
+@import 'typography/text-styles';
+
+//*--------------------------------------------------------------
+// STRUCTURE
+//--------------------------------------------------------------*/
+@import 'structure/breakpoints';  
+//PAGE STRUCTURE
+// @import 'structure/templates/grid-areas'; 
+// @import 'structure/templates/page-templates';
+@import 'structure/rows-wrappers';
+
+@import 'structure/body';  
+@import 'structure/header';
+@import 'structure/main-container';
+// @import 'structure/content';
+@import 'structure/footer';
+
+
+//*--------------------------------------------------------------
+// COMPONENTS
+//--------------------------------------------------------------*/
+// @import 'buttons';
+@import 'cards';
+@import 'tags';
+
+// MY NEW TESTING
+@import 'wip';  
+
+//*--------------------------------------------------------------
+// CSS from html, order it!
+//--------------------------------------------------------------*/
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+header, footer, #container{
+    border: 1px dashed lime;
+}
+body{
+    background-color: #f9f9f9;
+}
+
+img{
+    display: block;
+}
+
+#top_message{
+    width: 100%;
+    background-color: #2d2d2d;
+    color: #f9f9f9;
+    text-align: center;
+}
+.top-message-wrapper{
+    width: 100%;
+    max-width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+}
+.top-message-wrapper p{
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+}
+
+#container{
+    width: 100%;
+    max-width: 1024px;
+    min-height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#sidebar, #content{
+    width: 100%;
+    /*border: 3px dashed cyan;*/
+}
+#sidebar{
+    width: 25%;
+    border: 1px solid dotted lightgrey;
+}
+.sidebar-content{
+    padding: 8px 8px 16px 8px;
+}
+
+#content{
+    width: 75%;
+}
+
+.project-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.project-list li{ /* the same as .project-container */
+    position: relative;
+    min-width: 200px;
+    width: calc((100% / 3) - 20px); /* 100/3 minus margin between cards */
+    // max-width: null;
+    border: 1px solid transparent;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.project-container a{
+    color: unset;
+}
+.project-container:hover{
+    border: 1px dashed blue;
+}
+
+
+.project-card{
+    position: relative;
+    background-color: #e0e0e0;
+    display: inline-block;
+    height: 100%
+}
+
+.project-card .img-wrapper{
+    overflow: hidden;	
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.project-card .img-wrapper img{
+    width: 100%;
+    height: auto;
+}
+.project-card .information{
+    padding: 0 8px;
+}
+.tag-container{
+    width: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    padding: 8px;
+}
+.tag{
+    display: inline-block;	
+    padding: 4px;
+    margin: 2px;
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-size: .6em;
+    font-weight: 900;
+}
+
+
+.project-card .btn{
+    padding: 0 8px;
+}
+
+.need-tags:before{
+    content: "! -- Tags needed -- !";
+    display: inline-block;
+    background-color: red!important;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+//*--------------------------------------------------------------
+// VARS
+//--------------------------------------------------------------*/
+// GRID VARIABLES
+
+//content with inside a row
+//standar max width:
+$content-row-mw: 1500px; 
+
+
+// ROW VARIABLES
+$row-top:10px;
+$row-bottom:20px;
+// SECTION VARIABLES
+$section-top:60px;
+$section-bottom:600px;
+
+
+// PAGE CONTENT VARS
+//content max-width (including sidebars)
+//standar content max width:
+$page-container-mw: 850px; 
+
+
+// SIDEBAR VARS
+//sidebars paddings
+$sidebar-tb: null;
+$sidebar-sides: null;
+//Sidebars max-width
+$sidebar-w: null;
+$max-w-sidebar-l: 150px;
+$max-w-sidebar-r: 250px;
+
+
+
+// BTN VARS
+$btn-primary: $primary;
+$btn-radius: 500px;
+
+$btn-icon-pad: 5px;
+
+//color button
+$btn-color: $white;
+$btn-bg: $btn-primary;
+//outline btn
+$btn-outline-color: $btn-primary;
+$btn-border-w: 2px;
+$btn-border-style: solid;
+$btn-border-color: $btn-primary;
+
+

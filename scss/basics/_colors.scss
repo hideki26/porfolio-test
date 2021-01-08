@@ -1,0 +1,58 @@
+//*--------------------------------------------------------------
+// COLOR VARS
+//--------------------------------------------------------------*/
+$black: rgba(0,0,0,1);
+$white:  rgba(255,255,255,1);
+$red: red;
+
+
+$primary: rgba(255,183,61,1);
+$secondary: rgba(29,204,200,1);
+$secondaryclear: rgba(125,224,255,1);
+$accent: rgba(204,174,29,1);
+$accentdark: rgba(153,144,98,1);
+
+//*--------------------------------------------------------------
+// COLOR PALLETES --- WIP
+//--------------------------------------------------------------*/
+
+//winter
+// $primary: darkcyan;
+// $secondary: dodgerblue;
+// $secondaryclear:lightcyan;
+// $accent:coral;
+// $accentdark:brown;
+
+//spring
+// $primary: lightgreen;
+// $secondary: yellowgreen;
+// $secondaryclear: springgreen;
+// $accent:lightsalmon;
+// $accentdark:indianred;
+
+//summer
+// $primary: gold;
+// $secondary: deepskyblue;
+// $secondaryclear: skyblue;
+// $accent: yellowgreen;
+// $accentdark:forestgreen;
+
+//fall
+// $primary: orange;
+// $secondary: dimgrey;
+// $secondaryclear: darkgrey;
+// $accent: gold;
+// $accentdark:goldenrod;
+
+
+//*--------------------------------------------------------------
+// GRADIENTS
+//--------------------------------------------------------------*/
+// lists to use with mixin
+$gradient-list-1: $secondary, $accent;
+
+
+// @mixin rgba-background($hexcolor, $opacity) {
+//   background-color: $hexcolor;
+//   background-color: rgba($hexcolor, $opacity); 
+// }

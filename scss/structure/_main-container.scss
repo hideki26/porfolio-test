@@ -1,0 +1,9 @@
+//*--------------------------------------------------------------
+// MAIN CONTAINER = space for sidebars & content
+//--------------------------------------------------------------*/
+.main-container{ 
+ // BEWARE max content for the site???
+ max-width: $page-container-mw;
+ margin: 0 auto;
+ // @include main-container(both);
+}  

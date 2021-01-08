@@ -1,0 +1,16 @@
+//*--------------------------------------------------------------
+// BODY & HTML
+//--------------------------------------------------------------*/
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	position: relative;
+	//define template:
+	// @include body-grid-page(basic); 
+	
+	*{
+		box-sizing: border-box;
+	}
+} 

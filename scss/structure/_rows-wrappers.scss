@@ -1,0 +1,38 @@
+//*--------------------------------------------------------------
+// ROWS & wrappers
+//--------------------------------------------------------------*/
+
+//basic horizontal row
+section, .row{
+	width: 100%;
+	
+} 
+section{
+	padding-top: $section-top;
+	padding-bottom: $section-bottom;
+}
+.row{
+	padding-top: $row-top;
+	padding-bottom: $row-bottom;
+}
+
+//basic row wrapper, centered
+[class^='row-wrapper']{
+	margin: 0 auto;
+	width: 100%;
+	max-width: $content-row-mw;
+}
+
+//OFF content right row wrapper
+[class^='row-wrapper-off-r']{
+	@extend [class^='row-wrapper'];
+	 margin-right: 0;
+	 max-width: calc((100% - #{$content-row-mw}) / 2 + #{$content-row-mw}); 
+}
+
+//OFF content left row wrapper
+[class^='row-wrapper-off-l']{
+	@extend [class^='row-wrapper'];
+	margin-left: 0;
+	max-width: calc((100% - #{$content-row-mw}) / 2 + #{$content-row-mw}); 
+}

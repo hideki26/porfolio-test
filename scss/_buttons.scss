@@ -1,0 +1,86 @@
+//*--------------------------------------------------------------
+// BUTTONS
+//--------------------------------------------------------------*/
+
+.btn{
+	//main
+	color: $btn-color;
+	background-color: $btn-bg;
+	display: inline-block;
+
+	//general
+	width: auto;
+	text-decoration: none;
+	font-size: 1em;
+	padding: .8em 1.2em;
+	margin: .2em;
+
+	.btn-conent{
+		@include flexbox();
+		@include flex-direction(row);
+		@include justify-content(center);
+		@include align-items(center); 		
+	}
+
+	i{
+		padding-left: $btn-icon-pad;
+		padding-right: $btn-icon-pad;
+	}
+
+	i:not(:first-child){
+		padding-right: 0;
+	}
+	i:not(:last-child){
+		padding-left: 0;
+	}
+
+	.l-icon, .r-icon{}
+
+	.btn-text{}
+
+	&:hover{
+		opacity: .5;
+	}
+
+	&.btn-s{
+		font-size: .8em;
+		padding: .6em 1em;
+	}
+
+	&.btn-l{
+		font-size: 1.2em;
+		padding: .8em 1.2em;
+	}
+
+	&.btn-xl{
+		font-size: 1.5em;
+		padding: .9em 1.3em;
+	}
+
+	//full width
+	&.btn-full{
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	//btn rounded
+	&-r{
+		@extend .btn;
+		border-radius: $btn-radius;
+	} 
+
+	//outline btn
+	&-o{
+		@extend .btn;
+		color: $btn-primary;
+		background-color: initial;
+		border: $btn-border-w $btn-border-style $btn-border-color;
+	}
+
+	//outline btn rounded
+	&-ro{
+		@extend .btn-r;
+		@extend .btn-o;
+	}
+}

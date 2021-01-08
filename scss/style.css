@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 1em;
+  font-weight: 800;
+}
+
+h1, .h1 {
+  font-size: 3em;
+}
+
+h2, .h2 {
+  font-size: 2.2em;
+}
+
+h3, .h3 {
+  font-size: 2em;
+}
+
+h4, .h4 {
+  font-size: 1.75em;
+}
+
+h5, .h5 {
+  font-size: 1.5em;
+}
+
+h6, .h6 {
+  font-size: 1.2em;
+}
+
+p, .basic-txt {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+section, .row {
+  width: 100%;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 600px;
+}
+
+.row {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+[class^='row-wrapper'], [class^='row-wrapper-off-r'], [class^='row-wrapper-off-l'] {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
+[class^='row-wrapper-off-r'] {
+  margin-right: 0;
+  max-width: calc((100% - 1500px) / 2 + 1500px);
+}
+
+[class^='row-wrapper-off-l'] {
+  margin-left: 0;
+  max-width: calc((100% - 1500px) / 2 + 1500px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+}
+
+.main-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+}
+
+.btn, .btn-r, .btn-ro, .btn-o {
+  color: white;
+  background-color: #ffb73d;
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  font-size: 1em;
+  padding: .8em 1.2em;
+  margin: .2em;
+}
+
+.btn .btn-conent, .btn-r .btn-conent, .btn-ro .btn-conent, .btn-o .btn-conent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn i, .btn-r i, .btn-ro i, .btn-o i {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btn i:not(:first-child), .btn-r i:not(:first-child), .btn-ro i:not(:first-child), .btn-o i:not(:first-child) {
+  padding-right: 0;
+}
+
+.btn i:not(:last-child), .btn-r i:not(:last-child), .btn-ro i:not(:last-child), .btn-o i:not(:last-child) {
+  padding-left: 0;
+}
+
+.btn:hover, .btn-r:hover, .btn-ro:hover, .btn-o:hover {
+  opacity: .5;
+}
+
+.btn.btn-s, .btn-s.btn-r, .btn-s.btn-ro, .btn-s.btn-o {
+  font-size: .8em;
+  padding: .6em 1em;
+}
+
+.btn.btn-l, .btn-l.btn-r, .btn-l.btn-ro, .btn-l.btn-o {
+  font-size: 1.2em;
+  padding: .8em 1.2em;
+}
+
+.btn.btn-xl, .btn-xl.btn-r, .btn-xl.btn-ro, .btn-xl.btn-o {
+  font-size: 1.5em;
+  padding: .9em 1.3em;
+}
+
+.btn.btn-full, .btn-full.btn-r, .btn-full.btn-ro, .btn-full.btn-o {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.btn-r, .btn-ro {
+  border-radius: 500px;
+}
+
+.btn-o, .btn-ro {
+  color: #ffb73d;
+  background-color: initial;
+  border: 2px solid #ffb73d;
+}
+/*# sourceMappingURL=style.css.map */

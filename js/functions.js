@@ -3,7 +3,7 @@
 // --------------------------------------------------------------*/
 
 function createViewBtn(){
-	var html_view_btn = '<p class="btn"><span class="btn-content"><span class="btn-text">View</span></span></p>';
+	var html_view_btn = '<p class="view-more"><span class="view-more-content"><span class="view-more-text">View</span></span></p>';
 	$(".project-card").append(html_view_btn);
 }
 

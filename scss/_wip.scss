@@ -57,21 +57,4 @@
     align-items: stretch;
 } 
 
-.project-list li{ /* the same as .project-container */
-    position: relative;
-    min-width: 200px;
-    width: calc((100% / 3) - 20px); /* 100/3 minus margin between cards */
-    // max-width: null;
-    border: 1px solid transparent;
-    margin: 10px;
-    border-radius: $card-radius;
-    overflow: hidden;
 
-}
-
-.project-container a{
-    color: unset;
-}
-.project-container:hover{
-    border: 1px dashed blue;
-}

@@ -167,7 +167,7 @@ body {
 
 .card {
   position: relative;
-  background-color: #e0e0e0;
+  background-color: white;
   display: inline-block;
   height: 100%;
 }
@@ -178,6 +178,36 @@ body {
 
 .card .view-more {
   padding: 0 8px;
+  /* Safari */
+  transition: 0.3s;
+}
+
+.project-list li {
+  position: relative;
+  min-width: 200px;
+  width: calc((100% / 3) - 20px);
+  /* 100/3 minus margin between cards */
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.project-container {
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+  /* Safari */
+  transition: 0.3s;
+  top: 0px;
+  opacity: .95;
+}
+
+.project-container:hover {
+  box-shadow: 0px 16px 28px rgba(0, 0, 0, 0.2);
+  top: -3px;
+  opacity: 1;
+}
+
+.project-container a {
+  color: unset;
 }
 
 .tag-container {
@@ -313,25 +343,5 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-}
-
-.project-list li {
-  /* the same as .project-container */
-  position: relative;
-  min-width: 200px;
-  width: calc((100% / 3) - 20px);
-  /* 100/3 minus margin between cards */
-  border: 1px solid transparent;
-  margin: 10px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.project-container a {
-  color: unset;
-}
-
-.project-container:hover {
-  border: 1px dashed blue;
 }
 /*# sourceMappingURL=style.css.map */

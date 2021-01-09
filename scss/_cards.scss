@@ -4,20 +4,48 @@
 
 // VARS
 $card-radius: 20px;
-$card-shadow: null;
-$card-shadow-hover: null;
+$transition-card-hover: .3s;
 
 .card{
     position: relative;
-    background-color: #e0e0e0;
+    background-color: $white;
     display: inline-block;
     height: 100%;
-
+    
     .information{
         padding: 0 8px;
     }
     
     .view-more{
         padding: 0 8px;
+        @include transition($transition-card-hover);
     }
 }
+
+// .project-container works as card wrapper
+.project-list li{ 
+    position: relative;
+    min-width: 200px;
+    width: calc((100% / 3) - 20px); /* 100/3 minus margin between cards */
+    margin: 10px;
+    border-radius: $card-radius;
+    overflow: hidden;
+}
+
+.project-container{
+    @include shadow($card-shadow);
+    @include transition($transition-card-hover);
+    top: 0px;
+    opacity: .95;
+
+    &:hover{
+        @include shadow($card-shadow-hover);
+        top: -3px;
+        opacity: 1;
+    }
+
+    a{
+        color: unset;
+    }
+}
+

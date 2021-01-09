@@ -1,0 +1,9 @@
+//*--------------------------------------------------------------
+// CUSTOM MIXINS - for this project
+// --------------------------------------------------------------*/
+
+@mixin tagcolors($bg-color: grey, $text-color: white, $border: 0px solid transparent){
+    background-color: $bg-color;
+    border: $border;
+    color: $text-color;
+}

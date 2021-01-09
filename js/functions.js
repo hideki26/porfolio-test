@@ -4,18 +4,18 @@
 
 function createViewBtn(){
 	var html_view_btn = '<p class="view-more"><span class="view-more-content"><span class="view-more-text">View</span></span></p>';
-	$(".project-card").append(html_view_btn);
+	$(".card").append(html_view_btn);
 }
 
 function createTags(){
 	var html_tag_container = '<div class="tag-container"></div>';
 	
 	//create tag container in cards
-	$(".project-card .information").prepend(html_tag_container);
+	$(".card .information").prepend(html_tag_container);
 
 
 	//for each card, get data-tags and print the tags
-	$(".project-card .information").each(function(){
+	$(".card .information").each(function(){
 
 		//if data-tags has info
 		if ( $(this).attr("data-tags") ){

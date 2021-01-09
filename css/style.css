@@ -53,6 +53,22 @@ table {
   border-spacing: 0;
 }
 
+img {
+  display: block;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -124,16 +140,16 @@ section {
   max-width: calc((100% - 1500px) / 2 + 1500px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-}
-
-body * {
-  box-sizing: border-box;
 }
 
 .header {
@@ -149,27 +165,93 @@ body * {
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
+.card {
+  position: relative;
+  background-color: #e0e0e0;
+  display: inline-block;
   height: 100%;
-  padding: 0;
-  margin: 0;
 }
 
-header, footer, #container {
-  border: 1px dashed lime;
+.card .information {
+  padding: 0 8px;
 }
 
-body {
-  background-color: #f9f9f9;
+.card .view-more {
+  padding: 0 8px;
 }
 
-img {
-  display: block;
+.tag-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+
+.tag {
+  background-color: grey;
+  border: 0px solid transparent;
+  color: white;
+  display: inline-block;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 500px;
+  text-transform: uppercase;
+  font-size: .6em;
+}
+
+.tag.web {
+  background-color: black;
+  border: 0px solid transparent;
+  color: red;
+}
+
+.tag.electronics {
+  background-color: deepskyblue;
+  border: 0px solid transparent;
+  color: darkblue;
+}
+
+.tag.laser {
+  background-color: coral;
+  border: 0px solid transparent;
+  color: darkred;
+}
+
+.tag.3dprint {
+  background-color: olive;
+  border: 0px solid transparent;
+  color: lime;
+}
+
+.tag.design {
+  background-color: gold;
+  border: 0px solid transparent;
+  color: orangered;
+}
+
+.tag.craft {
+  background-color: brown;
+  border: 0px solid transparent;
+  color: gold;
+}
+
+.tag.learning {
+  background-color: white;
+  border: 0px solid transparent;
+  color: deepskyblue;
+}
+
+.need-tags:before {
+  content: "! -- Tags needed -- !";
+  display: inline-block;
+  background-color: red !important;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  z-index: 9999999;
+  width: 100%;
+  text-align: center;
 }
 
 #top_message {
@@ -207,7 +289,6 @@ img {
 
 #sidebar, #content {
   width: 100%;
-  /*border: 3px dashed cyan;*/
 }
 
 #sidebar {
@@ -252,64 +333,5 @@ img {
 
 .project-container:hover {
   border: 1px dashed blue;
-}
-
-.project-card {
-  position: relative;
-  background-color: #e0e0e0;
-  display: inline-block;
-  height: 100%;
-}
-
-.project-card .img-wrapper {
-  overflow: hidden;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-
-.project-card .img-wrapper img {
-  width: 100%;
-  height: auto;
-}
-
-.project-card .information {
-  padding: 0 8px;
-}
-
-.tag-container {
-  width: 100%;
-  /*position: absolute;*/
-  top: 0;
-  left: 0;
-  padding: 8px;
-}
-
-.tag {
-  display: inline-block;
-  padding: 4px;
-  margin: 2px;
-  background-color: yellowgreen;
-  color: white;
-  border-radius: 500px;
-  text-transform: uppercase;
-  font-size: .6em;
-  font-weight: 900;
-}
-
-.project-card .btn {
-  padding: 0 8px;
-}
-
-.need-tags:before {
-  content: "! -- Tags needed -- !";
-  display: inline-block;
-  background-color: red !important;
-  padding: 5px;
-  position: absolute;
-  top: 0;
-  z-index: 9999999;
-  width: 100%;
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

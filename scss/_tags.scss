@@ -1,14 +1,62 @@
 //*--------------------------------------------------------------
 // TAGS
 // --------------------------------------------------------------*/
-.tag{
-	&.web{}
-	&.electronics{}
-	&.laser{}
-	&.3dprint{}
-	&.design{}
-	&.craft{}
-	&.learning{}
+// VARS
+$tag-padding: 4px;
+$tag-margin: 2px;
+$tag-radius: 500px;
+$tag-shadow: null;
 
-	&.random{} //cal?
+
+.tag-container{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+}
+.tag{
+	@include tagcolors;
+    display: inline-block;	
+    padding: $tag-padding;
+    margin: $tag-margin;
+    border-radius: $tag-radius;
+    text-transform: uppercase;
+    font-size: .6em;
+
+	&.web{
+		@include tagcolors(black,red);
+	}
+
+	&.electronics{
+        @include tagcolors(deepskyblue,darkblue);
+    }
+	&.laser{
+        @include tagcolors(coral,darkred);
+    }
+	&.3dprint{
+        @include tagcolors(olive,lime);
+    }
+	&.design{
+        @include tagcolors(gold,orangered);
+    }
+	&.craft{
+        @include tagcolors(brown,gold);
+    }
+	&.learning{
+        @include tagcolors(white,deepskyblue);
+    }
+
+}
+
+.need-tags:before{
+    content: "! -- Tags needed -- !";
+    display: inline-block;
+    background-color: red!important;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    text-align: center;
 }

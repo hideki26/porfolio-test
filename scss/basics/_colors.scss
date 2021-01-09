@@ -13,36 +13,36 @@ $accent: rgba(204,174,29,1);
 $accentdark: rgba(153,144,98,1);
 
 //*--------------------------------------------------------------
-// COLOR PALLETES --- WIP
+// COLOR PALLETES --- WIP: if date between X and Y, add class to body with pallete
 //--------------------------------------------------------------*/
 
 //winter
-// $primary: darkcyan;
-// $secondary: dodgerblue;
-// $secondaryclear:lightcyan;
-// $accent:coral;
-// $accentdark:brown;
+$winter-primary: darkcyan;
+$winter-secondary: dodgerblue;
+$winter-secondaryclear:lightcyan;
+$winter-accent:coral;
+$winter-accentdark:brown;
 
 //spring
-// $primary: lightgreen;
-// $secondary: yellowgreen;
-// $secondaryclear: springgreen;
-// $accent:lightsalmon;
-// $accentdark:indianred;
+$spring-primary: lightgreen;
+$spring-secondary: yellowgreen;
+$spring-secondaryclear: springgreen;
+$spring-accent:lightsalmon;
+$spring-accentdark:indianred;
 
 //summer
-// $primary: gold;
-// $secondary: deepskyblue;
-// $secondaryclear: skyblue;
-// $accent: yellowgreen;
-// $accentdark:forestgreen;
+$summer-primary: gold;
+$summer-secondary: deepskyblue;
+$summer-secondaryclear: skyblue;
+$summer-accent: yellowgreen;
+$summer-accentdark:forestgreen;
 
 //fall
-// $primary: orange;
-// $secondary: dimgrey;
-// $secondaryclear: darkgrey;
-// $accent: gold;
-// $accentdark:goldenrod;
+$fall-primary: orange;
+$fall-secondary: dimgrey;
+$fall-secondaryclear: darkgrey;
+$fall-accent: gold;
+$fall-accentdark:goldenrod;
 
 
 //*--------------------------------------------------------------

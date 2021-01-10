@@ -196,10 +196,24 @@
 //--------------------------------------------------------------*/
 //Basic transition
 @mixin transition($e...){
-    $e: all !default;
-    -webkit-transition: $e; /* Safari */
-    -moz-transition: $e;
-    -ms-transition: $e;
-    -o-transition: $e;
-    transition: $e
+  $e: all !default;
+  -webkit-transition: $e; /* Safari */
+  -moz-transition: $e;
+  -ms-transition: $e;
+  -o-transition: $e;
+  transition: $e
+}
+
+//*--------------------------------------------------------------
+// Usefull
+//--------------------------------------------------------------*/
+
+//delete lateral margins for the first & last items in a line
+@mixin list-margins{
+  &:first-child{
+    margin-left: 0;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
 }

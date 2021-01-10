@@ -1,8 +1,72 @@
 //*--------------------------------------------------------------
 // MAIN CONTAINER = space for sidebars & content
 //--------------------------------------------------------------*/
-.main-container{ 
- // BEWARE max content for the site???
- max-width: $page-container-mw;
- margin: 0 auto;
-}  
+
+// VARS
+//content max-width (including sidebars)
+$page-container-w: 90%;
+$page-container-w-xl: 2560px;
+
+
+$content-w-s: 100%;
+$sidebar-max-w: 200px;
+
+$content-w: 85%;
+$sidebar-w: 100%;
+
+
+#container{
+    width: 100%;
+    max-width: unset;
+    min-height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    @include respond-to(l){ 
+        max-width: $page-container-w;
+    }
+}
+
+#sidebar{
+    width: $sidebar-max-w;
+    background-color: deepskyblue;
+    
+    &.mobile{
+        position: absolute;
+        height: 100%;
+        z-index: 9999;
+        background-color: dodgerblue;
+    }
+    
+    @include respond-to(s){
+        width: $sidebar-w;
+        max-width: $sidebar-max-w;
+    }
+}
+
+.sidebar-button{
+    position: absolute;
+    padding: 20px;
+    background-color: cyan;
+    text-align: center;
+    top: 0;
+    left: $sidebar-max-w;
+    cursor: pointer;
+}
+
+#content{
+    width: $content-w-s;
+    @include respond-to(s){
+        width: calc( #{$content-w-s} - #{$sidebar-max-w} );
+    }
+}
+
+
+.sidebar-content{
+    padding: 8px 8px 16px 8px;
+}
+

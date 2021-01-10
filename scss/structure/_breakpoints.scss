@@ -8,6 +8,7 @@ $breakpoints: (
         s: (min-width: 768px),
         m: (min-width: 992px),
         l: (min-width: 1200px),
+        xl: (min-width: 1500px),
 ) !default;
 
 /// Mixin to manage responsive breakpoints

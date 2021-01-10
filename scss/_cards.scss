@@ -5,6 +5,12 @@
 // VARS
 $card-radius: 20px;
 $transition-card-hover: .3s;
+$cards-h-gap: 20px;
+
+@mixin number-of-cards($cards-by-line, $cards-separation: $cards-h-gap ){
+    /* 100% / # of cards minus margin between cards */
+    width: calc((100% / #{$cards-by-line}) - #{$cards-separation}); 
+}
 
 .card{
     position: relative;
@@ -22,14 +28,41 @@ $transition-card-hover: .3s;
     }
 }
 
+.project-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+} 
+
 // .project-container works as card wrapper
 .project-list li{ 
     position: relative;
-    min-width: 200px;
-    width: calc((100% / 3) - 20px); /* 100/3 minus margin between cards */
+    @include number-of-cards(2);
+    // min-width: 200px;
     margin: 10px;
     border-radius: $card-radius;
     overflow: hidden;
+
+    border: 5px solid darkgreen;
+    
+    @include respond-to(xs){
+        border: 5px solid olivedrab;
+    }
+    @include respond-to(s){
+        @include number-of-cards(2);
+    }
+    @include respond-to(m){
+        @include number-of-cards(3);
+    }
+    @include respond-to(l){
+        @include number-of-cards(4);
+    }
+
 }
 
 .project-container{

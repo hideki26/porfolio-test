@@ -14,18 +14,18 @@
 </head>
 
 <body>
-	<div id="top_message">
+	<div id="top_message" data-message="active">
+		<!-- data-message in ".top-message" must be "active" to work -->
 		<div class="top-message-wrapper">
 			<p>
 				hi! this page is a test to pracise design, SCSS, JS/JQuery and git using github
 			</p>
 		</div>
-		
 	</div>
 	<!-- <header>
 		this is header
 	</header> -->
-	<div id="container">
+	<div id="container" class="main-container">
 		<div id="sidebar">
 			<div class="sidebar-content">
 				<a href="">
@@ -50,10 +50,9 @@
 				<nav>
 					<span>
 						Filter by: <br>
-						---- try to take "data-tag" from items, and generate the filters from them?
 					</span>
-					<ul class="filter-list">
-						<li class="filter">
+					<span class="filter-list">
+						<!-- <li class="filter">
 							<span>
 								Craft
 							</span>
@@ -77,8 +76,8 @@
 							<span>
 								Electronics
 							</span>							
-						</li>
-					</ul>
+						</li> -->
+					</span>
 				</nav>
 			</div>			
 		</div>
@@ -288,6 +287,9 @@
 	<footer>
 		this is footer
 	</footer>
+	<div class="curtain-footer">
+		End of the page :D
+	</div>
 	
 </body>
 <!-- MY CUSTOM JS -->

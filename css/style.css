@@ -157,6 +157,7 @@ body {
   background-color: #2d2d2d;
   color: #f9f9f9;
   text-align: center;
+  overflow: hidden;
 }
 
 .top-message-wrapper {
@@ -171,6 +172,12 @@ body {
   margin: 0 auto;
   display: inline-block;
   text-align: center;
+}
+
+.top-msg-close {
+  background-color: lime;
+  cursor: pointer;
+  padding: 20px;
 }
 
 .header {
@@ -298,13 +305,6 @@ body {
   margin: 10px;
   border-radius: 20px;
   overflow: hidden;
-  border: 5px solid darkgreen;
-}
-
-@media (min-width: 544px) {
-  .project-list li {
-    border: 5px solid olivedrab;
-  }
 }
 
 @media (min-width: 768px) {

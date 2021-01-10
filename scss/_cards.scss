@@ -43,15 +43,12 @@ $cards-h-gap: 20px;
 .project-list li{ 
     position: relative;
     @include number-of-cards(2);
-    // min-width: 200px;
     margin: 10px;
     border-radius: $card-radius;
     overflow: hidden;
-
-    border: 5px solid darkgreen;
-    
+   
     @include respond-to(xs){
-        border: 5px solid olivedrab;
+        //empty
     }
     @include respond-to(s){
         @include number-of-cards(2);

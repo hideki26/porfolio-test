@@ -48,6 +48,8 @@ function createTags(){
 // --------------------------------------------------------------*/
 
 function mobileSidebar(){
+	console.warn("fix why F12 resize don't work")
+
 	var sidebarBreackpoint = 768;
 	var screenWidth = $(window).width();
 	
@@ -105,15 +107,25 @@ function mobileSidebar(){
 // WIP
 // --------------------------------------------------------------*/
 function topMessage(){
-	var topMessageClosebtn = '<div class="top-msg-close">X</div>';
+	var topMessageClosebtn = '<span class="top-msg-close">X</span>';
 	
 	if ( $("#top_message").attr("data-message") == "active" ){
 		
-		console.warn("Don't forget to call the button and his action! ò_ó")
-		
+		//console.warn("Don't forget to call the button and his action! ò_ó")
+		$("#top_message").append(topMessageClosebtn);
+
 	}else{
-		console.log("no message :(")
+		console.log("no message :(");
 	}
+
+
+	$(".top-msg-close").click(function(){
+
+		$(this).parents("#top_message").slideToggle("slow");
+
+		console.log("clock msg")
+	});
+
 }
 
 function filters(){

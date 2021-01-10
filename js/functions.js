@@ -50,39 +50,45 @@ function createTags(){
 function mobileSidebar(){
 	var sidebarBreackpoint = 768;
 	var screenWidth = $(window).width();
+	
+	var sidebar = $("#sidebar");
+	var sidebarBtn = $("#sidebar .sidebar-button");
 	var htmlSidebarButton = '<div class="sidebar-button open">O</div>';
 	
-	//add btn
-	$("#sidebar").prepend(htmlSidebarButton);
-	$("#sidebar").addClass("sidebar-close");
-
+	//add btn with default settings and class to sidebar
+	sidebar.prepend(htmlSidebarButton);
+	sidebar.addClass("sidebar-close");
+	
+	//check screen size by default and set default classes
 	if (screenWidth <= sidebarBreackpoint) { 
-		$("#sidebar").toggleClass("mobile");
-		$("#sidebar").addClass("sidebar-close")
+		sidebar.addClass("mobile sidebar-close");
 	}else{
-		$("#sidebar").removeClass("sidebar-close");
-		$("#sidebar").removeClass("sidebar-open");
+		sidebar.removeClass("mobile sidebar-close sidebar-open");
 	}
 	
+	//check screen resize, when bigger reset to default by size
 	$(window).on('resize', function(){
+
 		var ResizingScreenWidth = $(window).width();
-		// console.log( "screen size on resize is: "+ ResizingScreenWidth )
+
+		//on resize, adjust button & close sidebar
+		$("#sidebar .sidebar-button").removeClass("close");
+		$("#sidebar .sidebar-button").addClass("open");
 		
 		if (ResizingScreenWidth <= sidebarBreackpoint) { 
-			$("#sidebar").addClass("mobile");
+			sidebar.addClass("mobile sidebar-close");
+			sidebar.removeClass("sidebar-open");
+			// sidebar.addClass("");
 		}else{
-			$("#sidebar").removeClass("mobile");
-			$("#sidebar").removeClass("sidebar-close");
-			$("#sidebar").removeClass("sidebar-open");
+			sidebar.removeClass("mobile sidebar-close sidebar-open");
 		}
-
-
 	});
 	
 	
 	//button open/close in sidebar
 	$("#sidebar .sidebar-button").click(function(){
-		$(this).toggleClass("open close")
+		$(this).toggleClass("open close");
+		
 		if( $(this).hasClass("close") ){ 
 			$(this).parent().addClass("sidebar-open");
 			$(this).parent().removeClass("sidebar-close");

@@ -202,8 +202,7 @@ body {
 
 @media (min-width: 768px) {
   #sidebar {
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
   }
 }
 
@@ -231,9 +230,12 @@ body {
   position: absolute;
   padding: 20px;
   background-color: cyan;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
   text-align: center;
-  top: 0;
-  left: 200px;
+  top: 12px;
+  left: 212px;
   cursor: pointer;
 }
 

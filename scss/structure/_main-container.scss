@@ -39,8 +39,7 @@ $sidebar-movement: .5s;
     
 
     @include respond-to(s){
-        width: $sidebar-w;
-        max-width: $sidebar-max-w;
+        width:  $sidebar-max-w;
     }
     
     &.mobile{
@@ -67,9 +66,10 @@ $sidebar-movement: .5s;
     position: absolute;
     padding: 20px;
     background-color: cyan;
+    @include border-radius(500px);
     text-align: center;
-    top: 0;
-    left: $sidebar-max-w;
+    top: 12px;
+    left: $sidebar-max-w + 12px;
     cursor: pointer;
 
     @include respond-to(s){

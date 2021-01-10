@@ -50,32 +50,48 @@ function createTags(){
 function mobileSidebar(){
 	var sidebarBreackpoint = 768;
 	var screenWidth = $(window).width();
-	var htmlSidebarButton = '<div class="sidebar-button close">O</div>';
-
+	var htmlSidebarButton = '<div class="sidebar-button open">O</div>';
+	
+	//add btn
+	$("#sidebar").prepend(htmlSidebarButton);
+	$("#sidebar").addClass("sidebar-close");
 
 	if (screenWidth <= sidebarBreackpoint) { 
 		$("#sidebar").toggleClass("mobile");
-		$("#sidebar").prepend(htmlSidebarButton);
+		$("#sidebar").addClass("sidebar-close")
 	}else{
-		$("#sidebar .sidebar-button").remove();
+		$("#sidebar").removeClass("sidebar-close");
+		$("#sidebar").removeClass("sidebar-open");
 	}
-
+	
 	$(window).on('resize', function(){
 		var ResizingScreenWidth = $(window).width();
-		console.log( "screen size on resize is: "+ ResizingScreenWidth )
+		// console.log( "screen size on resize is: "+ ResizingScreenWidth )
 		
 		if (ResizingScreenWidth <= sidebarBreackpoint) { 
 			$("#sidebar").addClass("mobile");
-			$("#sidebar").prepend(htmlSidebarButton);
 		}else{
 			$("#sidebar").removeClass("mobile");
-			$("#sidebar .sidebar-button").remove();
+			$("#sidebar").removeClass("sidebar-close");
+			$("#sidebar").removeClass("sidebar-open");
 		}
-	});
 
+
+	});
+	
+	
+	//button open/close in sidebar
 	$("#sidebar .sidebar-button").click(function(){
-		alert("Sidebar button clicked");
-	  });
+		$(this).toggleClass("open close")
+		if( $(this).hasClass("close") ){ 
+			$(this).parent().addClass("sidebar-open");
+			$(this).parent().removeClass("sidebar-close");
+			
+		}else if ( $(this).hasClass("open") ){
+			$(this).parent().addClass("sidebar-close");
+			$(this).parent().removeClass("sidebar-open");
+		}		
+	});
 }
 
 
@@ -84,11 +100,11 @@ function mobileSidebar(){
 // --------------------------------------------------------------*/
 function topMessage(){
 	var topMessageClosebtn = '<div class="top-msg-close">X</div>';
-
+	
 	if ( $("#top_message").attr("data-message") == "active" ){
-
+		
 		console.warn("Don't forget to call the button and his action! ò_ó")
-
+		
 	}else{
 		console.log("no message :(")
 	}

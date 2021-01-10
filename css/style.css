@@ -200,6 +200,13 @@ body {
   background-color: deepskyblue;
 }
 
+@media (min-width: 768px) {
+  #sidebar {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
 #sidebar.mobile {
   position: absolute;
   height: 100%;
@@ -207,11 +214,17 @@ body {
   background-color: dodgerblue;
 }
 
-@media (min-width: 768px) {
-  #sidebar {
-    width: 100%;
-    max-width: 200px;
-  }
+#sidebar.sidebar-close, #sidebar.sidebar-open {
+  /* Safari */
+  transition: 0.5s;
+}
+
+#sidebar.sidebar-close {
+  left: -200px;
+}
+
+#sidebar.sidebar-open {
+  left: 0;
 }
 
 .sidebar-button {
@@ -222,6 +235,12 @@ body {
   top: 0;
   left: 200px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .sidebar-button {
+    display: none;
+  }
 }
 
 #content {

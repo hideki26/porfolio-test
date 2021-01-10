@@ -14,6 +14,8 @@ $sidebar-max-w: 200px;
 $content-w: 85%;
 $sidebar-w: 100%;
 
+$sidebar-movement: .5s;
+
 
 #container{
     width: 100%;
@@ -35,6 +37,12 @@ $sidebar-w: 100%;
     width: $sidebar-max-w;
     background-color: deepskyblue;
     
+
+    @include respond-to(s){
+        width: $sidebar-w;
+        max-width: $sidebar-max-w;
+    }
+    
     &.mobile{
         position: absolute;
         height: 100%;
@@ -42,10 +50,17 @@ $sidebar-w: 100%;
         background-color: dodgerblue;
     }
     
-    @include respond-to(s){
-        width: $sidebar-w;
-        max-width: $sidebar-max-w;
+    &.sidebar-close, 
+    &.sidebar-open{
+        @include transition($sidebar-movement);
     }
+    &.sidebar-close{
+        left: -$sidebar-max-w;
+    }
+    &.sidebar-open{
+        left: 0;
+    }
+
 }
 
 .sidebar-button{
@@ -56,6 +71,10 @@ $sidebar-w: 100%;
     top: 0;
     left: $sidebar-max-w;
     cursor: pointer;
+
+    @include respond-to(s){
+        display: none;
+    }
 }
 
 #content{

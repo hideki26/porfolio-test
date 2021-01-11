@@ -1,7 +1,12 @@
 //*--------------------------------------------------------------
 // FOOTER
 //--------------------------------------------------------------*/
+$curtain-footer-h: 75vh;
+
+
+
 footer{
+	margin-bottom: $curtain-footer-h; 
 
 }
 .footer{
@@ -10,4 +15,16 @@ footer{
 	.footer-bottom{
 
 	}
+}
+
+.curtain-footer{
+	background-color: $primary;
+	color: $white;
+	display: inline-block;
+	width: 100%;
+	height: $curtain-footer-h;
+
+	position: fixed;
+	bottom: 0;
+	z-index: -9999;
 }

@@ -187,7 +187,7 @@ body {
 #container {
   width: 100%;
   max-width: unset;
-  min-height: 50%;
+  background-color: #1dccc8;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -266,8 +266,23 @@ body {
   padding: 8px 8px 16px 8px;
 }
 
+footer {
+  margin-bottom: 75vh;
+}
+
 .footer {
   width: 100%;
+}
+
+.curtain-footer {
+  background-color: #ffb73d;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 75vh;
+  position: fixed;
+  bottom: 0;
+  z-index: -9999;
 }
 
 .card {

@@ -62,7 +62,7 @@ function mobileSidebar(){
 	sidebar.addClass("sidebar-close");
 	
 	//check screen size by default and set default classes
-	if (screenWidth <= sidebarBreackpoint) { 
+	if (screenWidth < sidebarBreackpoint) { 
 		sidebar.addClass("mobile sidebar-close");
 	}else{
 		sidebar.removeClass("mobile sidebar-close sidebar-open");
@@ -77,7 +77,7 @@ function mobileSidebar(){
 		$("#sidebar .sidebar-button").removeClass("close");
 		$("#sidebar .sidebar-button").addClass("open");
 		
-		if (ResizingScreenWidth <= sidebarBreackpoint) { 
+		if (ResizingScreenWidth < sidebarBreackpoint) { 
 			sidebar.addClass("mobile sidebar-close");
 			sidebar.removeClass("sidebar-open");
 			// sidebar.addClass("");

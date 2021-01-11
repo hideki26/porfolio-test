@@ -42,13 +42,13 @@ $cards-h-gap: 20px;
 // .project-container works as card wrapper
 .project-list li{ 
     position: relative;
-    @include number-of-cards(2);
+    @include number-of-cards(1);
     margin: 10px;
     border-radius: $card-radius;
     overflow: hidden;
    
     @include respond-to(xs){
-        //empty
+        @include number-of-cards(2);
     }
     @include respond-to(s){
         @include number-of-cards(2);

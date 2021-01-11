@@ -1,6 +1,8 @@
 //*--------------------------------------------------------------
 // SHADOWS
 // --------------------------------------------------------------*/
-
+$no-shadow: 0 0 0 transparent;
 $card-shadow: 0 16px 16px $black-10;
 $card-shadow-hover: 0px 16px 28px $black-20;
+
+$overlay-shadow: 100px 0 75px $black-25;

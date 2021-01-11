@@ -20,7 +20,6 @@ $sidebar-movement: .5s;
 #container{
     width: 100%;
     max-width: unset;
-    // min-height: 50%;
     background-color: $secondary;
     margin: 0 auto;
     display: flex;
@@ -32,32 +31,32 @@ $sidebar-movement: .5s;
     @include respond-to(l){ 
         max-width: $page-container-w;
     }
-
-
 }
 
 #sidebar{
     width: $sidebar-max-w;
-    background-color: deepskyblue;
-    
+    background-color: $red;
 
     @include respond-to(s){
         width:  $sidebar-max-w;
     }
     
     &.mobile{
-        position: absolute;
+        position: fixed;
         height: 100%;
         z-index: 9999;
-        background-color: dodgerblue;
+        background-color: $red;
     }
     
     &.sidebar-close, 
     &.sidebar-open{
+        top: 0;
         @include transition($sidebar-movement);
+        @include shadow($overlay-shadow);
     }
     &.sidebar-close{
         left: -$sidebar-max-w;
+        @include shadow($no-shadow);
     }
     &.sidebar-open{
         left: 0;
@@ -66,17 +65,24 @@ $sidebar-movement: .5s;
 }
 
 .sidebar-button{
-    position: absolute;
+    position: fixed;
     padding: 20px;
-    background-color: cyan;
+    background-color: $red;
     @include border-radius(500px);
     text-align: center;
     top: 12px;
-    left: $sidebar-max-w + 12px;
     cursor: pointer;
+    @include transition($sidebar-movement);
 
     @include respond-to(s){
         display: none;
+    }
+
+    &.open{
+        left: 12px;
+    }
+    &.close{
+        left: $sidebar-max-w + 12px;
     }
 }
 

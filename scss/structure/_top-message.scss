@@ -15,16 +15,18 @@
     max-width: 80%;
     display: inline-block;
     margin: 0 auto;
-}
-.top-message-wrapper p{
-    width: 100%;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: center;
+    padding: 12px;
+
+    p{
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+    }
 }
 
 .top-msg-close{
-    background-color: lime;
+    background-color: $primary;
     cursor: pointer;
     padding: 20px;
 }

@@ -18,9 +18,9 @@ $sidebar-movement: .5s;
 
 
 #container{
+    border: 1px dotted red;
     width: 100%;
     max-width: unset;
-    background-color: $secondary;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +35,7 @@ $sidebar-movement: .5s;
 
 #sidebar{
     width: $sidebar-max-w;
-    background-color: $red;
+    background-color: $white;
 
     @include respond-to(s){
         width:  $sidebar-max-w;
@@ -45,7 +45,7 @@ $sidebar-movement: .5s;
         position: fixed;
         height: 100%;
         z-index: 9999;
-        background-color: $red;
+        background-color: $white;
     }
     
     &.sidebar-close, 
@@ -67,7 +67,7 @@ $sidebar-movement: .5s;
 .sidebar-button{
     position: fixed;
     padding: 20px;
-    background-color: $red;
+    background-color: $white;
     @include border-radius(500px);
     text-align: center;
     top: 12px;
@@ -96,5 +96,9 @@ $sidebar-movement: .5s;
 
 .sidebar-content{
     padding: 8px 8px 16px 8px;
+
+    .about, nav{
+        margin: 12px 0 24px 0;
+    }
 }
 

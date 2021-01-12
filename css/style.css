@@ -165,6 +165,7 @@ body {
   max-width: 80%;
   display: inline-block;
   margin: 0 auto;
+  padding: 12px;
 }
 
 .top-message-wrapper p {
@@ -175,7 +176,7 @@ body {
 }
 
 .top-msg-close {
-  background-color: lime;
+  background-color: #ffb73d;
   cursor: pointer;
   padding: 20px;
 }
@@ -185,9 +186,9 @@ body {
 }
 
 #container {
+  border: 1px dotted red;
   width: 100%;
   max-width: unset;
-  background-color: #1dccc8;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +205,7 @@ body {
 
 #sidebar {
   width: 200px;
-  background-color: red;
+  background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -217,7 +218,7 @@ body {
   position: fixed;
   height: 100%;
   z-index: 9999;
-  background-color: red;
+  background-color: white;
 }
 
 #sidebar.sidebar-close, #sidebar.sidebar-open {
@@ -239,7 +240,7 @@ body {
 .sidebar-button {
   position: fixed;
   padding: 20px;
-  background-color: red;
+  background-color: white;
   border-radius: 500px;
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
@@ -278,6 +279,10 @@ body {
   padding: 8px 8px 16px 8px;
 }
 
+.sidebar-content .about, .sidebar-content nav {
+  margin: 12px 0 24px 0;
+}
+
 footer {
   margin-bottom: 75vh;
 }
@@ -287,7 +292,6 @@ footer {
 }
 
 .curtain-footer {
-  background-color: #ffb73d;
   color: white;
   display: inline-block;
   width: 100%;

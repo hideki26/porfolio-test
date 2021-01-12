@@ -48,7 +48,6 @@ function createTags(){
 // --------------------------------------------------------------*/
 
 function mobileSidebar(){
-	console.warn("fix why F12 resize don't work")
 
 	var sidebarBreackpoint = 768;
 	var screenWidth = $(window).width();
@@ -131,19 +130,17 @@ function topMessage(){
 function filters(){
 	// For each item, take data tags
 	
-	var ArrayTags = [];
-	
 	$("#content .project-container").each(function(index,value){
-		getty = $(this).find(".information").attr("data-tags");
+		var getTagsFromItems = $(this).find(".information").attr("data-tags") + ",";
+		var getTagsFromItemsTrimmed = getTagsFromItems.replace( /(?!\s+$)\s+/g, "" ).trim();
 		$(this).find(".information").attr("data-tags");
 		
-		$("#sidebar").find(".filter-list").append(getty + "// ");
-		
-		ArrayTags.push(value);
-		
-		
-		
+		$("#sidebar").find(".filter-list").append(getTagsFromItems);
+
+		// console.log(getTagsFromItems)
+		console.warn(getTagsFromItemsTrimmed)
 	});
+
 }
 
 

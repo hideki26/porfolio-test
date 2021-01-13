@@ -129,20 +129,35 @@ function topMessage(){
 
 function filters(){
 	// For each item, take data tags
-	
+	// empty string
+	 var ultimatestring= [];
+
+
 	$("#content .project-container").each(function(index,value){
 		var getTagsFromItems = $(this).find(".information").attr("data-tags") + ",";
 		var getTagsFromItemsTrimmed = getTagsFromItems.replace( /(?!\s+$)\s+/g, "" ).trim();
+
+
 		$(this).find(".information").attr("data-tags");
 		
-		$("#sidebar").find(".filter-list").append(getTagsFromItems);
+		// $("#sidebar").find(".filter-list").append(getTagsFromItemsTrimmed);
 
-		// console.log(getTagsFromItems)
-		console.warn(getTagsFromItemsTrimmed)
+
+		// ADD the loop val to string
+		console.log(ultimatestring += getTagsFromItemsTrimmed)
 	});
 
-}
+	//delete doubles from string and delte last comma
+	// ultimatestring = Array.from(new Set(ultimatestring.split(','))).toString().slice(0,-1);
 
+
+	ultimatestring = Array.from(new Set(ultimatestring.split(',')));
+
+	console.log("THIS POINT: "+ultimatestring)
+
+	ultimatestring.forEach((item) => console.log(item))
+
+}
 
 
 

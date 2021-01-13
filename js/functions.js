@@ -48,7 +48,7 @@ function createTags(){
 // --------------------------------------------------------------*/
 
 function mobileSidebar(){
-
+	
 	var sidebarBreackpoint = 768;
 	var screenWidth = $(window).width();
 	
@@ -69,9 +69,9 @@ function mobileSidebar(){
 	
 	//check screen resize, when bigger reset to default by size
 	$(window).on('resize', function(){
-
+		
 		var ResizingScreenWidth = $(window).width();
-
+		
 		//on resize, adjust button & close sidebar
 		$("#sidebar .sidebar-button").removeClass("close");
 		$("#sidebar .sidebar-button").addClass("open");
@@ -103,6 +103,53 @@ function mobileSidebar(){
 
 
 //*--------------------------------------------------------------
+// FILTER TAGS. Generate tags and filtering
+// --------------------------------------------------------------*/
+function filters(){
+	// For each item, take data tags
+	// empty string
+	var ultimatestring= [];
+	
+	
+	$("#content .project-container").each(function(index,value){
+		var getTagsFromItems = $(this).find(".information").attr("data-tags") + ",";
+		var getTagsFromItemsTrimmed = getTagsFromItems.replace( /(?!\s+$)\s+/g, "" ).trim();
+		
+		$(this).find(".information").attr("data-tags");
+		// ADD the loop val to string
+		ultimatestring += getTagsFromItemsTrimmed;
+
+	});
+	// .slice(0,-1)
+	//delete doubles from string, delete last comma, and delete last empty space
+	ultimatestring = Array.from(new Set(ultimatestring.split(',').slice(0,-1)));
+	
+	//for each Element in array do something?
+	// ultimatestring.forEach(element => console.log(element))
+	
+	ultimatestring.forEach(function(item){
+		//create vars for content & container
+		var filterSpan = document.createElement("span");
+		var Filtertext = document.createTextNode(item);
+		// fusion them
+		filterSpan.appendChild(Filtertext);
+		//append in nav
+		$("#sidebar").find(".filter-list").append(filterSpan);
+	});
+
+
+	//now work on click filter
+	$("#sidebar").find(".filter-list span").click(function(){
+		console.warn("click!")
+		//compare EACH element with this text?
+		
+	});
+}
+
+
+
+
+//*--------------------------------------------------------------
 // WIP
 // --------------------------------------------------------------*/
 function topMessage(){
@@ -112,52 +159,22 @@ function topMessage(){
 		
 		//console.warn("Don't forget to call the button and his action! ò_ó")
 		$("#top_message").append(topMessageClosebtn);
-
+		
 	}else{
 		console.log("no message :(");
 	}
-
-
+	
+	
 	$(".top-msg-close").click(function(){
-
+		
 		$(this).parents("#top_message").slideToggle("slow");
-
+		
 		console.log("clock msg")
 	});
-
+	
 }
 
-function filters(){
-	// For each item, take data tags
-	// empty string
-	 var ultimatestring= [];
 
-
-	$("#content .project-container").each(function(index,value){
-		var getTagsFromItems = $(this).find(".information").attr("data-tags") + ",";
-		var getTagsFromItemsTrimmed = getTagsFromItems.replace( /(?!\s+$)\s+/g, "" ).trim();
-
-
-		$(this).find(".information").attr("data-tags");
-		
-		// $("#sidebar").find(".filter-list").append(getTagsFromItemsTrimmed);
-
-
-		// ADD the loop val to string
-		console.log(ultimatestring += getTagsFromItemsTrimmed)
-	});
-
-	//delete doubles from string and delte last comma
-	// ultimatestring = Array.from(new Set(ultimatestring.split(','))).toString().slice(0,-1);
-
-
-	ultimatestring = Array.from(new Set(ultimatestring.split(',')));
-
-	console.log("THIS POINT: "+ultimatestring)
-
-	ultimatestring.forEach((item) => console.log(item))
-
-}
 
 
 

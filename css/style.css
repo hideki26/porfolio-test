@@ -283,6 +283,11 @@ body {
   margin: 12px 0 24px 0;
 }
 
+.filter-list span {
+  display: inline-block;
+  border: 1px dashed red;
+}
+
 footer {
   margin-bottom: 75vh;
 }

@@ -102,3 +102,9 @@ $sidebar-movement: .5s;
     }
 }
 
+.filter-list{
+    span{
+        display: inline-block;
+        border: 1px dashed red;
+    }
+}

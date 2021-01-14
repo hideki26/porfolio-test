@@ -288,6 +288,11 @@ body {
   border: 1px dashed red;
 }
 
+.project-container.excluded {
+  border: 5px dashed green;
+  display: none;
+}
+
 footer {
   margin-bottom: 75vh;
 }

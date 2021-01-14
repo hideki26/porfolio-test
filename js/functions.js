@@ -118,7 +118,7 @@ function filters(){
 		$(this).find(".information").attr("data-tags");
 		// ADD the loop val to string
 		ultimatestring += getTagsFromItemsTrimmed;
-
+		
 	});
 	// .slice(0,-1)
 	//delete doubles from string, delete last comma, and delete last empty space
@@ -136,12 +136,36 @@ function filters(){
 		//append in nav
 		$("#sidebar").find(".filter-list").append(filterSpan);
 	});
-
-
+	
+	
+	//Add same class as tag name
+	$("#sidebar").find(".filter-list span").each(function(){
+		var filtertagText = $(this).text();
+		$(this).addClass(filtertagText);
+	});
+	
 	//now work on click filter
 	$("#sidebar").find(".filter-list span").click(function(){
+		
+		var clikedFilter = $(this).attr("class");
+		//check for excluded elements & delete class
+		$(".project-list .excluded").removeClass("excluded");
+		
 		console.warn("click!")
-		//compare EACH element with this text?
+		//compare EACH element with the classes
+		$(".project-list .project-container .information").each(function(){
+			
+			//if this DON'T has the class... 
+			if( (!$(this).find(".tag-container .tag").hasClass(clikedFilter)) ) {
+				console.error("YEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSS")
+				
+				$(this).parents(".project-container").addClass("excluded")
+				
+				
+			}else{
+				console.error("im not :(")
+			}
+		});
 		
 	});
 }

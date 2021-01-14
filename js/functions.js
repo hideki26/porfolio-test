@@ -146,8 +146,12 @@ function filters(){
 	
 	//now work on click filter
 	$("#sidebar").find(".filter-list span").click(function(){
-		
+		//WIP
+		//filtered button, is like a tag, with the text and a X button that retunrs to view all
 		var clikedFilter = $(this).attr("class");
+		var htmltext = "Filter by: "
+		var htmlFilteredbyButton = '<p class="filteredby"><span class="filteredbycontent"><span class="filteredbytext">'+ htmltext + clikedFilter +'</span><span class="deletefilter">X</span></span></p>';
+		var htmlFilteredbyButtonSidebar = '<p class="deletefilter">Delete filter</p>';
 		//check for excluded elements & delete class
 		$(".project-list .excluded").removeClass("excluded");
 		
@@ -156,19 +160,27 @@ function filters(){
 		$(".project-list .project-container .information").each(function(){
 			
 			//if this DON'T has the class... 
-			if( (!$(this).find(".tag-container .tag").hasClass(clikedFilter)) ) {
-				console.error("YEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSS")
-				
+			if( (!$(this).find(".tag-container .tag").hasClass(clikedFilter)) ) {			
 				$(this).parents(".project-container").addClass("excluded")
-				
-				
-			}else{
-				console.error("im not :(")
 			}
 		});
 		
+		//ADD TEXT FILTERED BY in content ////////////////////////// WIP and a delete in sidebar?
+		$(".content-top").html(htmlFilteredbyButton);
+		$("#sidebar .close-wrapper").html(htmlFilteredbyButtonSidebar);
+
+		//DELETE FILTERS
+		$(".deletefilter").click(function(){
+			$(".project-container.excluded").removeClass("excluded");
+			$(".content-top").children().remove();
+			$("#sidebar .close-wrapper").children().remove();
+		});
 	});
 }
+
+
+
+
 
 
 

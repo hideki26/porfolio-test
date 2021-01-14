@@ -293,6 +293,11 @@ body {
   display: none;
 }
 
+.deletefilter {
+  padding: 20px;
+  background-color: cyan;
+}
+
 footer {
   margin-bottom: 75vh;
 }
